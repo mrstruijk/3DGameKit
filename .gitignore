@@ -81,3 +81,17 @@ LargeFiles/
 *.ccProject
 Trauma/Library/ArtifactDB
 Trauma/Library/SourceAssetDB
+
+
+# Wwise, as per: https://www.audiokinetic.com/qa/1547/there-definitive-files-should-could-omitted-source-control
+# .cache: yes rebuilt from Originals and Project
+.cache
+# .akd: yes rebuilt from .wav files
+.akd
+# .prof: no, but these are generated at each capture, they are not part of the project data
+.prof
+# .wsetting: no, wsettings can be placed under source. It may be practical to retrieve some of your user settings if you use multiple computers.
+# .validationcache: yes rebuilt from .wwu files, to avoid running them through schema validation, to save time on project load.
+.validationcache
+$ .wem files: yes, rebuilt from Originals. Part of .cache folder, and copied to the GeneratedSoundBanks
+.wem files
